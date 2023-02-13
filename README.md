@@ -1,6 +1,6 @@
 # Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+Docs for Jerry Jeong's personal portfolio website! This repository focuses on documentation side of the website.
 
 ### Installation
 
@@ -8,7 +8,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 $ pnpm install
 ```
 
-### Local Development
+### Running locally
 
 ```
 $ pnpm start
