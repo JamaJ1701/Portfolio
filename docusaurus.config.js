@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: "Jerry Jeong",
+    title: "Jerry Jerong",
     tagline: "Developer, UX, Engineering",
     favicon: "img/logo.png",
 
