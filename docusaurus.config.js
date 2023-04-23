@@ -84,25 +84,7 @@ const config = {
                         items: [
                             {
                                 label: "Tutorial",
-                                to: "/docs/intro",
-                            },
-                        ],
-                    },
-                    {
-                        title: "Apps",
-                        items: [
-                            {
-                                label: "Tutorial",
-                                to: "/docs/intro",
-                            },
-                        ],
-                    },
-                    {
-                        title: "More",
-                        items: [
-                            {
-                                label: "Tutorial",
-                                to: "/docs/intro",
+                                to: "/docs/projects",
                             },
                         ],
                     },
