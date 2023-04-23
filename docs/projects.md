@@ -2,6 +2,14 @@
 sidebar_position: 1
 ---
 
-# Projects page
+# Projects Overview
 
-Projects page
+For now, majority of my projects are from university.
+
+## Personal projects
+
+-   Portfolio website
+
+## University projects
+
+-   Spark

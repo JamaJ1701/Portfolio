@@ -28,3 +28,8 @@
     --ifm-color-primary-lightest: #c3d1fb;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+iframe {
+    width: 100%;
+    min-height: 500px;
+}
