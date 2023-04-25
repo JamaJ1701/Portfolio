@@ -2,9 +2,15 @@
     "name": "@jerry-personal-archive/root",
     "version": "1.0.0",
     "private": true,
+    "scripts": {
+        "build": "pnpm run build"
+    },
     "workspaces": [
         "packages/*",
         "apps/*",
         "services/*"
-    ]
+    ],
+    "devDependencies": {
+        "@changesets/cli": "^2.26.1"
+    }
 }
