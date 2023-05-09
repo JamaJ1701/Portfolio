@@ -1,5 +1,5 @@
 name: deploy-website
-run-name: website deploying to jerryjeong.com
+run-name: Website deploy
 on: [push]
 jobs:
     build-doco:
@@ -9,4 +9,7 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: "14"
-            - run: npm build
+            # Build
+            - run: cd apps/docs-website
+            - run: npm run build
+            - run: ls
