@@ -7,13 +7,24 @@ on:
     #         - main
     # workflow_dispatch:
 jobs:
-    build-doco:
+    build:
         runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [20]
         steps:
             - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v2
               with:
-                  node-version: "14"
-            # Build
-            - run: npm --prefix ./apps/docs-website run build
+                  version: 7
+            - name: Use Node.js version ${{matrix.node-version}}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{matrix.node-version}}
+                  cache: "pnpm"
+            - name: Install dependencies
+              run: pnpm i
+            - name: Build repo
+              run: pnpm --prefix ./apps/docs-website run build
             - run: echo "folder is $(ls apps/)"
