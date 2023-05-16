@@ -1,6 +1,11 @@
 name: deploy-website
 run-name: Website deploy
 on: [push]
+    # push:
+    #     branches:
+    #         - main
+    # workflow_dispatch:
+
 jobs:
     build-doco:
         runs-on: ubuntu-latest
@@ -10,7 +15,5 @@ jobs:
               with:
                   node-version: "14"
             # Build
-            - run: ls
-            - run: cd apps/docs-website
-            - run: npm build
-            - run: ls
+            - run: npm --prefix ./apps/docs-website build
+            - run: echo "folder is: $(ls)"
