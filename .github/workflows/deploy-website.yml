@@ -1,6 +1,7 @@
 name: deploy-website
 run-name: Website deploy
-on: [push]
+on:
+    [push]
     # push:
     #     branches:
     #         - main
@@ -15,4 +16,4 @@ jobs:
                   node-version: "14"
             # Build
             - run: npm --prefix ./apps/docs-website build
-            - run: echo "folder is: $(ls)"
+            - run: echo "folder is $(ls)"
