@@ -1,6 +1,5 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./styles.module.css";
 import { titleType } from "../../util/Proptypes";
 
 const FeatureList = [
@@ -59,7 +58,7 @@ function Feature(props: titleType) {
 
 export default function HomepageFeatures() {
     return (
-        <section className={styles.features}>
+        <section className="features">
             <div className="container">
                 <div className="row">
                     {FeatureList.map((props, idx) => (
