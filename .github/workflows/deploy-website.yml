@@ -15,5 +15,5 @@ jobs:
               with:
                   node-version: "14"
             # Build
-            - run: npm --prefix ./apps/docs-website build
-            - run: ls | echo
+            - run: npm --prefix ./apps/docs-website run build
+            - run: echo "folder is $(ls apps/)"
