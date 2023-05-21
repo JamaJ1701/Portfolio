@@ -24,7 +24,7 @@ jobs:
                   node-version: ${{matrix.node-version}}
                   cache: "pnpm"
             - name: Install dependencies
-              run: pnpm i
+              run: pnpm i --no-frozen-lockfile
             - name: Build repo
               run: pnpm --prefix ./apps/doco run build
             - run: echo "folder is $(ls apps/)"
