@@ -27,13 +27,13 @@ jobs:
               run: pnpm i --no-frozen-lockfile
             - name: Build repo
               run: pnpm --prefix ./apps/doco run build
-            - run: echo "folder is $(ls apps/)"
+            - run: echo "folder is $(ls apps/doco)"
             - name: Sync files
               uses: SamKirkland/FTP-Deploy-Action@v4.3.4
               with:
                   server: ftp.jerryjeong.com
                   username: jerry@jerryjeong.com
                   password: ${{ secrets.FTP_PASSWORD }}
-                  local-dir: ./apps/doco/build
-                  server-dir: ./public_html
+                  local-dir: ./apps/doco/build/
+                  server-dir: ./public_html/
                   protocol: ftps
