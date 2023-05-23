@@ -1,12 +1,38 @@
 name: deploy-website
-run-name: website deploying to jerryjeong.com
-on: [push]
+run-name: Website deploy
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
 jobs:
-    build-doco:
+    build-and-deploy:
         runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [20]
         steps:
             - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v2
               with:
-                  node-version: "14"
-            - run: npm build
+                  version: 7
+            - name: Use Node.js version ${{matrix.node-version}}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{matrix.node-version}}
+                  cache: "pnpm"
+            - name: Install dependencies
+              run: pnpm i --no-frozen-lockfile
+            - name: Build repo
+              run: pnpm --prefix ./apps/doco run build
+            - run: echo "folder is $(ls apps/doco)"
+            - name: Sync files
+              uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+              with:
+                  server: ftp.jerryjeong.com
+                  username: jerry@jerryjeong.com
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  local-dir: ./apps/doco/build/
+                  server-dir: ./public_html/
+                  protocol: ftps
