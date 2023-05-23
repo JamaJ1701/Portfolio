@@ -1,11 +1,10 @@
 name: deploy-website
 run-name: Website deploy
 on:
-    [push]
-    # push:
-    #     branches:
-    #         - main
-    # workflow_dispatch:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
