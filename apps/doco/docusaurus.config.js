@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
     title: "Jerry Jeong",
     tagline: "Jerry Jeong's personal documentation",
-    favicon: "img/favicon.ico",
+    favicon: "img/logo.png",
 
     // Set the production url of your site here
     url: "https://jerryjeong.com",
@@ -63,10 +63,10 @@ const config = {
                 },
                 items: [
                     {
-                        type: "docSidebar",
-                        sidebarId: "tutorialSidebar",
+                        type: "doc",
+                        docId: "projects",
                         position: "left",
-                        label: "Tutorial",
+                        label: "Projects",
                     },
                     { to: "/blog", label: "Blog", position: "left" },
                     {
