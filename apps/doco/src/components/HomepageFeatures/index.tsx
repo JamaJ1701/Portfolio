@@ -4,14 +4,12 @@ import styles from "./styles.module.css";
 
 type FeatureItem = {
     title: string;
-    Svg: React.ComponentType<React.ComponentProps<"svg">>;
     description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
     {
         title: "Mainly, A Developer",
-        Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
         description: (
             <>
                 After my personal journey through engineering, UX design and
@@ -23,7 +21,6 @@ const FeatureList: FeatureItem[] = [
     },
     {
         title: "This Portfolio Website",
-        Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
         description: (
             <>
                 At some point of my life, I wanted to document my personal
@@ -36,7 +33,6 @@ const FeatureList: FeatureItem[] = [
     },
     {
         title: "Applications",
-        Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
         description: (
             <>
                 Although my plan is to make an archive of my previous work, I
@@ -49,11 +45,11 @@ const FeatureList: FeatureItem[] = [
     },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, description }: FeatureItem) {
     return (
         <div className={clsx("col col--4")}>
             <div className="text--center">
-                <Svg className={styles.featureSvg} role="img" />
+                {/* <Svg className={styles.featureSvg} role="img" /> */}
             </div>
             <div className="text--center padding-horiz--md">
                 <h3>{title}</h3>
