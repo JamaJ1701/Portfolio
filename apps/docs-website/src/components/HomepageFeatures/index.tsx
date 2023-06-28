@@ -5,6 +5,7 @@ import { titleType } from "../../util/Proptypes";
 const FeatureList = [
     {
         title: "Mainly, A Developer",
+        Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
         description: (
             <>
                 After my personal journey through engineering, UX design and
@@ -16,7 +17,7 @@ const FeatureList = [
     },
     {
         title: "This Portfolio Website",
-        // Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+        Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
         description: (
             <>
                 At some point of my life, I wanted to document my personal
@@ -29,7 +30,7 @@ const FeatureList = [
     },
     {
         title: "Applications",
-        // Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+        Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
         description: (
             <>
                 Although my plan is to make an archive of my previous work, I
