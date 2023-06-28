@@ -9,6 +9,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
     title: "Jerry Jeong",
     tagline: "Jerry Jeong's personal documentation",
+
     favicon: "img/logo.png",
 
     // Set the production url of your site here
