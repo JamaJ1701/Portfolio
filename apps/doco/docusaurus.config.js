@@ -1,14 +1,16 @@
-// @ts-check
+// @ts-nocheck
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
+/** @type {import('@docusaurus').Config} */
 const config = {
     title: "Jerry Jeong",
     tagline: "Jerry Jeong's personal documentation",
-    favicon: "img/favicon.ico",
+
+    favicon: "img/logo.png",
 
     // Set the production url of your site here
     url: "https://jerryjeong.com",
@@ -53,22 +55,27 @@ const config = {
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            colorMode: {
+                defaultMode: "dark",
+                disableSwitch: true,
+                respectPrefersColorScheme: false,
+            },
             // Replace with your project's social card
             image: "img/docusaurus-social-card.jpg",
             navbar: {
                 title: "Jerry Jeong",
                 logo: {
                     alt: "Logo of Jerry",
-                    src: "img/logo.svg",
+                    src: "img/logo.png",
                 },
                 items: [
                     {
-                        type: "docSidebar",
-                        sidebarId: "tutorialSidebar",
-                        position: "left",
-                        label: "Tutorial",
+                        type: "doc",
+                        docId: "projects",
+                        position: "right",
+                        label: "Projects",
                     },
-                    { to: "/blog", label: "Blog", position: "left" },
+                    { to: "/blog", label: "Blog", position: "right" },
                     {
                         href: "https://github.com/JAMAJ1701",
                         label: "GitHub",
