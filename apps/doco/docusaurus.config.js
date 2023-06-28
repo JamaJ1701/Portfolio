@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
@@ -65,16 +65,16 @@ const config = {
                 title: "Jerry Jeong",
                 logo: {
                     alt: "Logo of Jerry",
-                    src: "img/logo.svg",
+                    src: "img/logo.png",
                 },
                 items: [
                     {
                         type: "doc",
                         docId: "projects",
-                        position: "left",
+                        position: "right",
                         label: "Projects",
                     },
-                    { to: "/blog", label: "Blog", position: "left" },
+                    { to: "/blog", label: "Blog", position: "right" },
                     {
                         href: "https://github.com/JAMAJ1701",
                         label: "GitHub",
