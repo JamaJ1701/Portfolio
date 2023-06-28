@@ -5,6 +5,7 @@ const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
+/** @type {import('@docusaurus').Config} */
 const config = {
     title: "Jerry Jeong",
     tagline: "Jerry Jeong's personal documentation",
