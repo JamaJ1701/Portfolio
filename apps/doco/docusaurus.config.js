@@ -69,46 +69,23 @@ const config = {
                     src: "img/logo.png",
                 },
                 items: [
-                    {
-                        type: "doc",
-                        docId: "intro",
-                        position: "right",
-                        label: "Projects",
-                    },
-                    { to: "/blog", label: "Blog", position: "right" },
-                    {
-                        href: "https://github.com/JAMAJ1701",
-                        label: "GitHub",
-                        position: "right",
-                    },
+                    // {
+                    //     type: "doc",
+                    //     docId: "intro",
+                    //     position: "right",
+                    //     label: "Projects",
+                    // },
+                    // { to: "/blog", label: "Blog", position: "right" },
+                    // {
+                    //     href: "https://github.com/JAMAJ1701",
+                    //     label: "GitHub",
+                    //     position: "right",
+                    // },
                 ],
             },
             footer: {
                 style: "dark",
-                links: [
-                    {
-                        title: "Docs",
-                        items: [
-                            {
-                                label: "Tutorial",
-                                to: "/docs/intro",
-                            },
-                        ],
-                    },
-                    {
-                        title: "Social",
-                        items: [
-                            {
-                                label: "Linkedin",
-                                href: "https://www.linkedin.com/in/myoungseok-jeong-34264613b/",
-                            },
-                            {
-                                label: "GitHub",
-                                href: "https://github.com/JAMAJ1701",
-                            },
-                        ],
-                    },
-                ],
+                links: [],
                 copyright: `Copyright © ${new Date().getFullYear()} Jerry Jeong.`,
             },
             prism: {
@@ -116,6 +93,19 @@ const config = {
                 darkTheme: darkCodeTheme,
             },
         }),
+    plugins: [
+        async function myPlugin(context, options) {
+            return {
+                name: "docusaurus-tailwindcss",
+                configurePostCss(postcssOptions) {
+                    // Appends TailwindCSS and AutoPrefixer.
+                    postcssOptions.plugins.push(require("tailwindcss"));
+                    postcssOptions.plugins.push(require("autoprefixer"));
+                    return postcssOptions;
+                },
+            };
+        },
+    ],
 };
 
 module.exports = config;
