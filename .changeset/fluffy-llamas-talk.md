@@ -1,5 +1,0 @@
----
-"doco": minor
----
-
-First version
